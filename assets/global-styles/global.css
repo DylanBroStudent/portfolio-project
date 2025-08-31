@@ -5,16 +5,17 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 40px;
+    padding: 5px 5px;
     background-color: #ffffff;
     border: 1px solid #000;
 }
 
 .logo {
-    
+    border: 1px solid #000;
+    padding: 10px 10px;
 }
 
-.logo-text {
+.logo a {
     font-size: 2em;
     font-weight: bold;
     text-decoration: none;
@@ -27,12 +28,53 @@
 }
 
 .nav-links li {
-    padding: 0 10px;
+    padding: 0px 2.5px;
+    margin: 0px;
 }
 
 .nav-links a {
     text-decoration: none;
     color: #000;
     border: 1px solid #000;
-    padding: 10px 20px;
+    padding: 20px 30px;
+}
+
+/* Mobile Header Layout */
+
+@media (max-width: 768px) {
+    .main-header {
+        flex-direction: column;
+        align-items: center;
+        padding: 0px 10px;
+    }
+
+    .logo {
+        width: 100%;
+        text-align: center;
+        padding: 10px 5px;
+        margin: 5px;
+    }
+
+    .main-nav {
+        width: 100%;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 0px;
+        margin: -2.5px -7.5px 2.5px -7.5px;
+    }
+
+    .nav-links li {
+        width: 50%;
+        padding: 2.5px;
+        box-sizing: border-box;
+    }
+
+    .nav-links a {
+        display:flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
