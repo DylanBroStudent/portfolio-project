@@ -102,7 +102,7 @@ body {
 
 .footer-content {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     align-items: end;
     width: 100%;
     gap: 20px;
@@ -110,6 +110,7 @@ body {
 
 .footer-text {
     color: grey;
+    text-align: end;
 }
 
 .footer-social-links {
