@@ -54,6 +54,6 @@
 /* Mobile Layout */
 @media (max-width: 768px) {
     .project-display {
-
+        flex-direction: column;
     }
 }
