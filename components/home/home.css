@@ -3,8 +3,8 @@
 .project-showcase {
     display: flex;
     flex-direction: column; /* Stacks the display and selector vertically */
-    background-color: #ffffff;
-    border: 1px solid #000;
+    background-color: var(--structure-color);
+    border: 1px solid var(--debug-border-color);
     margin-top: 5px;
 }
 
@@ -14,11 +14,12 @@
     display: flex;
     padding: 5px;
     gap: 5px;
+    margin-bottom: -5px;
 }
 
 .project-image-large {
     flex: 2;
-    border: 1px solid #000;
+    border: 1px solid var(--debug-border-color);
 }
 
 .project-display .text-content {
@@ -30,14 +31,14 @@
 .project-selector {
     background-color: var(--structure-color);
     display: flex;
-    border-top: 1px solid #000;
+    border-top: 1px solid var(--debug-border-color);
     padding: 5px;
     gap: 5px;
 }
 
 .selector-tile {
     flex: 1;
-    border: 1px solid #000;
+    border: 1px solid var(--debug-border-color);
     aspect-ratio: 2 / 1;
     cursor: pointer; /* Indicate it's clickable */
 }
