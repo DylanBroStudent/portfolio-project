@@ -1,14 +1,18 @@
 /* Colour Variables */
 :root {
-    --background-color:#555;
-    --content-color:#eee;
-    --structure-color: #ccc;
-    --accent-color: #f08b2d;
-    --image-background-color: #994e4e;
+    --background-color:#181818;
+    --background-gradient-start: #160a00;
+    --background-gradient-end: #000911;
+    --content-color:#111111;
+    --structure-color: #252525;
+    --accent-color: #ffa856;
+    --image-background-color: #330c00;
 
-    --text-main-color: #000;
-    --text-Header-color: #000;
-    --text-link-color: #f08b2d;
+    --text-main-color: #ffffff;
+    --text-secondary-color: #a0a0a0;
+    --text-header-color: #ffffff;
+    --text-link-hover-color: var(--accent-color);
+    --text-link-color: var(--accent-color);
 }
 
 
@@ -23,6 +27,11 @@ body {
     display: flex;
     flex-direction: column;
     background-color: var(--background-color);
+    background-image: linear-gradient(
+        to bottom right,
+        var(--background-gradient-start),
+        var(--background-gradient-end)
+    );
 }
 
 a {
@@ -49,8 +58,11 @@ a {
     font-size: 2em;
     font-weight: bold;
     text-decoration: none;
+    color: var(--text-header-color);
+}
 
-    color: #000;
+.logo a:hover {
+    color: var(--text-link-hover-color);
 }
 
 .nav-links {
@@ -67,9 +79,13 @@ a {
 .nav-links a {
     background-color: var(--content-color);
     text-decoration: none;
-    color: #000;
+    color: var(--text-header-color);
     border: 1px solid #000;
     padding: 20px 30px;
+}
+
+.nav-links a:hover {
+    color: var(--text-link-hover-color);
 }
 
 /* Content */
@@ -85,24 +101,32 @@ a {
 
 .text-content {
     background-color: var(--content-color);
+    color: var(--text-main-color);
     flex: 2;
     padding: 10px;
     border: 1px solid #000;
     margin: 5px;
 }
 
-.text-content h1, .text-content h2 {
+.text-content h1, 
+.text-content h2 {
+
     margin-top: 0px;
 }
 
 .text-content h1 a,
 .text-content h2 a {
     text-decoration: none;
-    color: #000;
+    color:var(--text-header-color);
+}
+
+.text-content h1 a:hover,
+.text-content h2 a:hover {
+    color: var(--text-link-hover-color);
 }
 
 .image-content {
-    background-color: var(--content-color);
+    background-color: var(--image-background-color);
     flex: 1;
     border: 1px solid #000;
     margin: 5px;
@@ -133,7 +157,7 @@ a {
 }
 
 .footer-text {
-    color: grey;
+    color: var(--text-secondary-color);
     text-align: end;
 }
 
