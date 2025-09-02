@@ -3,10 +3,10 @@
     --background-color:#181818;
     --background-gradient-start: #251c17;
     --background-gradient-end: #00080f;
-    --content-color:#cc7d7d00;
+    --content-color:#ff474700;
     --structure-color: #02000581;
-    --accent-color: #ff7b7b;
-    --image-background-color: #310c12;
+    --accent-color: #ff919a;
+    --image-background-color: #310c1200;
 
     --text-main-color: #ffffff;
     --text-secondary-color: #ffffff7a;
@@ -26,7 +26,7 @@ html {
 
 body {
     min-height: 100vh;
-    margin: 0px;
+    margin: 5px;
     display: flex;
     flex-direction: column;
     background-color: var(--background-color);

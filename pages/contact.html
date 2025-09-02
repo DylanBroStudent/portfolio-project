@@ -25,7 +25,7 @@
 
     <!-- Main Content-->
     <main>
-        <div class="contact-social-links">
+        <section class="contact-social-links">
             <div class="contact-link-tile">
                 <a href="">
                     <img src="../assets/images/site/placeholder_goldenwide.svg"alt="Thumbnail for social media link 1">
@@ -56,10 +56,59 @@
                     <img src="../assets/images/site/placeholder_goldenwide.svg"alt="Thumbnail for social media link 6">
                 </a>
             </div>
-            
-        </div>
+        </section>
+        <section id="Contact" class="content-section">
+            <div class="text-content">
+                <h1>Contact</h1>
+                <p>
+                    dylan-brodie@live.nmit.ac.nz
+                </p>
+            </div>
+        </section>
+        <section class="content-section">
+            <form method="" class="contact-form">
+                <fieldset>
+                    <legend>Personal Information</legend>
+                    <label for="full-name">Name/Organisation (required):</label>
+                    <input type="text" id="full-name" name="name" placeholder="Ex. John Doe" required size="20">
+        
+                    <label for="email">Email address (required):</label>
+                    <input placeholder="example@email.com" required id="email" type="email" name="email" size="20" />
+                </fieldset>
+
+                <fieldset>
+                    <legend>
+                        What is your the nature of your inquiry?
+                    </legend>
+        
+                    <label for="Business">| Business</label>
+                    <input type="checkbox" id="Business" name="Business" value="Business" />
+        
+                    <label for="Collaboration">| Collaboration</label>
+                    <input type="checkbox" id="Collaboration" name="Collaboration" value="Collaboration" />
+        
+                    <label for="Fan Mail">| Fan Mail</label>
+                    <input type="checkbox" id="Fan Mail" name="Fan Mail" value="Fan Mail" />
+        
+                    <label for="Hate Mail">| Hate Mail</label>
+                    <input checked type="checkbox" id="Hate Mail" name="Hate Mail" value="Hate Mail" />
+        
+                    <label for="Fashion Tips">| Fashion Tips </label>
+                    <input type="checkbox" id="Fashion Tips" name="Fashion Tips" value="Fashion Tips" />
+                    |
+                </fieldset>
+                <fieldset>
+                    <legend>
+                        Message
+                    </legend>
+                    <textarea name="Message" id="Message"></textarea>
+                    <input type="submit">
+                </fieldset>
+
+        
+            </form>
+        </section>
     </main>
-    
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">

@@ -1,3 +1,30 @@
+form{
+    color: var(--text-main-color);
+    width: 95%;
+    padding: 10px;
+    accent-color:var(--accent-color);
+    justify-content: center;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+form fieldset {
+    border: 1px solid var(--debug-border-color);
+}
+
+form fieldset textarea {
+    width: 99.5%;
+    height: 100px;
+    resize: vertical;
+}
+
+form fieldset legend {
+    font-weight: bold;
+}
+
+.contact-form-submit-button {
+    float: right;
+}
+
 .contact-social-links {
     background-color: var(--structure-color);
     display: flex;
@@ -12,6 +39,7 @@
     background-color: var(--image-background-color);
 }
 
+
 @media (max-width: 768px) {
     .contact-social-links {
         flex-wrap: wrap;
@@ -19,5 +47,10 @@
     }
     .contact-link-tile {
         flex: 1 30%;
+    }
+    
+    form fieldset textarea {
+        width: 100%;
+        resize: none;
     }
 }
