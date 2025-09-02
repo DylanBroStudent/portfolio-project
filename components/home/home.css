@@ -1,16 +1,19 @@
 /* --- Project Showcase Section --- */
 
 .project-showcase {
+    background-color: var(--structure-color);
+
     display: flex;
     flex-direction: column; /* Stacks the display and selector vertically */
-    background-color: var(--structure-color);
-    border: 1px solid var(--debug-border-color);
     margin-top: 5px;
+
+    border: 1px solid var(--debug-border-color);
 }
 
 /* Project display */
 .project-display {
     background-color: var(--structure-color);
+    
     display: flex;
     padding: 5px;
     gap: 5px;
