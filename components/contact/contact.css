@@ -4,7 +4,7 @@ form{
     padding: 10px;
     accent-color:var(--accent-color);
     justify-content: center;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: Arial;
 }
 
 form fieldset {

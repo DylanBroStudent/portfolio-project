@@ -2,7 +2,7 @@
 
 .project-showcase {
     background-color: var(--structure-color);
-
+    box-shadow: 0 0 5px 5.5px var(--structure-color);
     display: flex;
     flex-direction: column; /* Stacks the display and selector vertically */
     margin-top: 5px;
@@ -13,11 +13,10 @@
 /* Project display */
 .project-display {
     background-color: var(--structure-color);
-    
+
     display: flex;
     padding: 5px;
     gap: 5px;
-    margin-bottom: -5px;
 }
 
 .project-image-large {
@@ -33,6 +32,7 @@
 /* Project selector */
 .project-selector {
     background-color: var(--structure-color);
+    
     display: flex;
     border-top: 1px solid var(--debug-border-color);
     padding: 5px;
@@ -49,6 +49,7 @@
 .project-image-large img,
 .selector-tile img {
     background-color: var(--image-background-color);
+    
     width: 100%;
     height: 100%;
     display: block;
