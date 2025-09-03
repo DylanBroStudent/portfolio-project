@@ -26,11 +26,18 @@ form fieldset legend {
 }
 
 .contact-social-links {
+    display: flex;
     background-color: var(--structure-color);
     display: flex;
     padding: 5px;
-    margin-top: 5px;
-    gap: 7.5px;
+    margin-top: 10px;
+    gap: 5px;
+    border: 1px solid var(--debug-border-color);
+    box-shadow: 0 0 5px 5.5px var(--structure-color);
+}
+
+.contact-link-tile {
+    margin: 0 2.5px;
 }
 
 .contact-link-tile a img {
