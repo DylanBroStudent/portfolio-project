@@ -5,15 +5,13 @@
     box-shadow: 0 0 5px 5.5px var(--structure-color);
     display: flex;
     flex-direction: column; /* Stacks the display and selector vertically */
-    margin-top: 5px;
+    margin-top: 10px;
 
     border: 1px solid var(--debug-border-color);
 }
 
 /* Project display */
 .project-display {
-    background-color: var(--structure-color);
-
     display: flex;
     padding: 5px;
     gap: 5px;
@@ -31,7 +29,6 @@
 
 /* Project selector */
 .project-selector {
-    background-color: var(--structure-color);
     
     display: flex;
     border-top: 1px solid var(--debug-border-color);
