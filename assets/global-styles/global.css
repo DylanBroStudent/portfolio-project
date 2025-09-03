@@ -1,11 +1,12 @@
-/* Colour Variables */
+
 :root {
+    /* Colour Variables */
     --background-color:#181818;
     --background-gradient-start: #4b5c53;
     --background-gradient-end: #01111f;
     --content-color:#ff474700;
-    --structure-color: #0200056e;
-    --accent-color: #91ffd5;
+    --structure-color: #0200058a;
+    --accent-color: #91ffda;
     --image-background-color: #310c1200;
 
     --text-main-color: #ffffff;
@@ -15,6 +16,12 @@
     --text-link-color: var(--accent-color);
 
     --debug-border-color: #ffffff00;
+
+    /* Font Variables */
+    --font-logo: Arial;
+    --font-nav: Arial;
+    --font-header: Arial;
+    --font-body: Arial;
 }
 
 
@@ -44,12 +51,12 @@ a {
 
 p {
     color: var(--text-main-color);
-    font-family: Arial;
+    font-family: var(--font-body);
 }
 
 h1 {
     color: var(--text-header-color);
-    font-family: Arial;
+    font-family: var(--font-header);
 }
 
 /* Header */
@@ -61,11 +68,11 @@ h1 {
     padding: 5px;
     margin-bottom: 20px;
     border: 1px solid var(--debug-border-color);
-        box-shadow: 0 0 3px 5px var(--structure-color);
+    box-shadow: 0 0 3px 5px var(--structure-color);
 }
 
 .logo {
-    font-family: Arial;
+    font-family: var(--font-logo);
     background-color: var(--content-color);
     border: 1px solid var(--debug-border-color);
     padding: 10px;
@@ -83,7 +90,7 @@ h1 {
 }
 
 .main-nav {
-    font-family: Arial;
+    font-family: var(--font-nav);
     display: flex;
     gap: 5px;
 }

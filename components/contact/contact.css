@@ -4,7 +4,7 @@ form{
     padding: 10px;
     accent-color:var(--accent-color);
     justify-content: center;
-    font-family: Arial;
+    font-family: var(--font-body);
 }
 
 form fieldset {
