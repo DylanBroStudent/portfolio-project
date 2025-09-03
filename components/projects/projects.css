@@ -74,6 +74,10 @@
     bottom: -10px;
 }
 
+.projects-item:hover .project-title h1 {
+    color: var(--accent-color);
+}
+
 @media (max-width: 768px)  {
     .projects-grid {
         grid-template-columns: repeat(2, 1fr);
