@@ -33,3 +33,49 @@
     display: block;
     object-fit: cover;
 }
+
+.projects-grid {
+    background-color: var(--structure-color);
+    box-shadow: 0 0 5px 5.5px var(--structure-color);
+    object-fit: cover;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    align-items: center;
+    justify-content: center;
+    gap: 5px;
+    margin: 10px 5px 0px 5px;
+}
+
+.projects-item {
+    border: 1px solid var(--debug-border-color);
+    text-align: end;
+    position: relative;
+}
+
+.project-image img {
+    height: 100%;
+    width: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.project-title {
+    position: absolute;
+    width: 100%;
+    height: 12.5%;
+    bottom: 0px;
+    right: 0px;
+    background-color: var(--structure-color);
+    box-shadow: 0 -10px 20px 15px var(--structure-color);
+}
+.project-title h1 {
+    position: absolute;
+    right: 10px;
+    bottom: -10px;
+}
+
+@media (max-width: 768px)  {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
