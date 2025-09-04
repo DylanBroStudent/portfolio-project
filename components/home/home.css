@@ -12,19 +12,28 @@
 
 /* Project display */
 .project-display {
-    display: flex;
-    padding: 5px;
-    gap: 5px;
+    position: relative;
+}
+
+.project-display .text-content{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 30%;
+    margin: 0px;
+    background-color: var(--structure-color);
+    padding: 10px;
+    overflow-y: auto;
 }
 
 .project-image-large {
-    flex: 2;
     border: 1px solid var(--debug-border-color);
+    margin: 0px;
 }
 
 .project-display .text-content {
-    flex: 1; 
-    margin: 0px;
+
 }
 
 /* Project selector */
@@ -57,5 +66,6 @@
 @media (max-width: 768px) {
     .project-display {
         flex-direction: column;
+        
     }
 }
