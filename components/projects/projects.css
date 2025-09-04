@@ -49,6 +49,8 @@
     border: var(--debug-border-width) solid var(--debug-border-color);
     text-align: end;
     position: relative;
+
+    overflow: hidden;
 }
 
 .project-image img {
@@ -56,6 +58,7 @@
     width: 100%;
     display: block;
     object-fit: cover;
+    transition: transform 0.3s ease;
 }
 
 .project-title {
@@ -73,8 +76,11 @@
     bottom: -10px;
 }
 
-.projects-item:hover .project-title h1 {
+.projects-item:hover .project-title h1  {
     color: var(--accent-color);
+}
+.projects-item:hover .project-image img {
+    transform: scale(1.1);
 }
 
 @media (max-width: 768px)  {

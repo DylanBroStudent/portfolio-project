@@ -148,6 +148,15 @@ h2 a {
     gap: 5px;
 }
 
+.title-content {
+    margin-left: 30px;
+    margin-bottom: 10px;
+}
+
+.title-content h1 a:hover{
+    color: var(--accent-color);
+}
+
 .text-content {
     background-color: var(--content-color);
     color: var(--text-main-color);

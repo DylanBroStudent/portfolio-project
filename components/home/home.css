@@ -54,7 +54,15 @@
     flex: 1;
     border: var(--debug-border-width) solid var(--debug-border-color);
     aspect-ratio: 2 / 1;
-    cursor: pointer; /* Indicate it's clickable */
+    overflow: hidden;
+
+}
+
+.selector-tile img {
+    transition: transform 0.3s ease;
+}
+.selector-tile img:hover {
+    transform: scale(1.1);
 }
 
 .project-image-large img,
