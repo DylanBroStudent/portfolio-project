@@ -7,7 +7,7 @@
     flex-direction: column; /* Stacks the display and selector vertically */
     margin-top: 10px;
 
-    border: 1px solid var(--debug-border-color);
+    border: var(--debug-border-width)solid var(--debug-border-color);
 }
 
 /* Project display */
@@ -28,26 +28,27 @@
 }
 
 .project-image-large {
-    border: 1px solid var(--debug-border-color);
+    border: var(--debug-border-width) solid var(--debug-border-color);
     margin: 0px;
 }
 
 .project-display .text-content {
-
+    margin: 1px;
+    box-shadow: -20px 0 15px var(--structure-color);
 }
 
 /* Project selector */
 .project-selector {
     
     display: flex;
-    border-top: 1px solid var(--debug-border-color);
+    border-top: --debug-border-color solid var(--debug-border-color);
     padding: 5px;
     gap: 5px;
 }
 
 .selector-tile {
     flex: 1;
-    border: 1px solid var(--debug-border-color);
+    border: var(--debug-border-width) solid var(--debug-border-color);
     aspect-ratio: 2 / 1;
     cursor: pointer; /* Indicate it's clickable */
 }

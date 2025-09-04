@@ -8,7 +8,7 @@ form{
 }
 
 form fieldset {
-    border: 1px solid var(--debug-border-color);
+    border: --debug-border-color solid var(--debug-border-color);
 }
 
 form fieldset textarea {
@@ -32,7 +32,7 @@ form fieldset legend {
     padding: 5px;
     margin-top: 10px;
     gap: 5px;
-    border: 1px solid var(--debug-border-color);
+    border: --debug-border-color solid var(--debug-border-color);
     box-shadow: 0 0 5px 5.5px var(--structure-color);
 }
 

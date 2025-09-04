@@ -1,7 +1,7 @@
 .projects-title {
     display: flex;
     background-color: var(--structure-color);
-    border: 1px solid var(--debug-border-color);
+    border: var(--debug-border-width) solid var(--debug-border-color);
     margin-top: 10px;
     padding: 0px;
     box-shadow: 0 0 5px 5.5px var(--structure-color);
@@ -15,14 +15,14 @@
     justify-content: center;
     flex: 1;
     padding: 10px;
-    border: 1px solid var(--debug-border-color);
+    border: var(--debug-border-width) solid var(--debug-border-color);
     margin: 5px;
 }
 
 .title-image-content {
     background-color: var(--image-background-color);
     flex: 3;
-    border: 1px solid var(--debug-border-color);
+    border: var(--debug-border-width) solid var(--debug-border-color);
     margin: 5px;
 }
 
@@ -46,7 +46,7 @@
 }
 
 .projects-item {
-    border: 1px solid var(--debug-border-color);
+    border: var(--debug-border-width) solid var(--debug-border-color);
     text-align: end;
     position: relative;
 }
