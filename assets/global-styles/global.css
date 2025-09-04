@@ -54,6 +54,7 @@ a {
 p {
     color: var(--text-main-color);
     font-family: var(--font-body);
+    font-size: 100%;
 }
 
 h1 {
@@ -64,13 +65,17 @@ h1 {
 /* Header */
 .main-header {
     background-color: var(--structure-color);
+    position: fixed;
+    width: 100%;
+    top: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 5px;
-    margin-bottom: 20px;
     border: var(--debug-border-width) solid var(--debug-border-color);
     box-shadow: 0 0 3px 5px var(--structure-color);
+    z-index: 999;
+    backdrop-filter: blur(3px);
 }
 
 .logo {
@@ -119,12 +124,18 @@ h1 {
 
 /* Content */
 
+.content-space {
+    height: 120px;
+}
+
 .content-section {
+    position: relative;
     display: flex;
+    width: 100%;
     background-color: var(--structure-color);
     border: var(--debug-border-width) solid var(--debug-border-color);
+    padding-top: 10px;
     margin-top: 10px;
-    padding: 0px;
     box-shadow: 0 0 5px 5.5px var(--structure-color);
 }
 
@@ -139,7 +150,6 @@ h1 {
 
 .text-content h1, 
 .text-content h2 {
-
     margin-top: 0px;
 }
 
@@ -158,7 +168,7 @@ h1 {
     background-color: var(--image-background-color);
     flex: 1;
     border: var(--debug-border-width) solid var(--debug-border-color);
-    margin-top: 5px;
+    margin-top: 10px;
 }
 
 .media-content img {
@@ -173,6 +183,38 @@ h1 {
     height: 100%;
     display: block;
     object-fit: cover;
+}
+
+.foreground-content {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    margin: 0px;
+    padding: 1% 5%;
+    overflow-y: auto;
+    box-sizing: border-box;
+}
+
+.foreground-content h1 a {
+    color: var(--text-main-color);
+    text-decoration: none;
+}
+
+.foreground-content h1 a:hover {
+    color: var(--accent-color);
+    text-decoration: none;
+}
+
+.foreground-content p {
+    padding: 0px 10px;
+}
+
+.background-content {
+    width: 100%;
+}
+
+.background-content img {
+    width: 100%;
 }
 
 /* Footer */
@@ -216,6 +258,7 @@ h1 {
     .main-header {
         flex-direction: column;
         align-items: center;
+        position: inherit;
     }
 
     .logo {
@@ -261,5 +304,8 @@ h1 {
     .content-section {
         flex-direction: column;
     }
+    .content-space {
+    height: 20px;
+}
 }
 
