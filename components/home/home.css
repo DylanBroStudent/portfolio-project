@@ -1,3 +1,8 @@
+.welcome-message {
+    font-family: 'Courier New', Courier, monospace;
+    margin-top: 5px;
+}
+
 /* --- Project Showcase Section --- */
 
 .project-showcase {
@@ -67,5 +72,8 @@
     .project-display {
         flex-direction: column;
         
+    }
+    .project-display .text-content {
+        width: 50%;
     }
 }
