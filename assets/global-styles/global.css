@@ -153,14 +153,21 @@ h1 {
     color: var(--text-link-hover-color);
 }
 
-.image-content {
+.media-content {
     background-color: var(--image-background-color);
     flex: 1;
     border: 1px solid var(--debug-border-color);
     margin: 5px;
 }
 
-.image-content img {
+.media-content img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+.media-content video {
     width: 100%;
     height: 100%;
     display: block;
