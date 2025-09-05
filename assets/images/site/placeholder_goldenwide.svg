@@ -24,9 +24,9 @@
      inkscape:deskcolor="#505050"
      inkscape:document-units="mm"
      showgrid="false"
-     inkscape:zoom="0.2973261"
-     inkscape:cx="1156.9788"
-     inkscape:cy="413.68719"
+     inkscape:zoom="0.5946522"
+     inkscape:cx="903.04888"
+     inkscape:cy="450.68361"
      inkscape:window-width="2560"
      inkscape:window-height="1369"
      inkscape:window-x="1072"
@@ -67,5 +67,21 @@
          transform="scale(1,-1)"
          r="12.467146" />
     </g>
+    <text
+       xml:space="preserve"
+       style="font-weight:bold;font-size:16.9333px;line-height:14px;font-family:sans-serif;-inkscape-font-specification:'sans-serif Bold';text-align:center;text-anchor:middle;fill:#c0c0c0;stroke-width:0.396875;stroke-linejoin:round;paint-order:markers fill stroke;stop-color:#000000;fill-opacity:1"
+       x="172.41345"
+       y="197.77492"
+       id="text15542"><tspan
+         sodipodi:role="line"
+         id="tspan15540"
+         style="font-size:22.5778px;stroke-width:0.396875;fill:#c0c0c0;fill-opacity:1"
+         x="172.41345"
+         y="197.77492">PLACE</tspan><tspan
+         sodipodi:role="line"
+         style="stroke-width:0.396875;fill:#c0c0c0;fill-opacity:1"
+         x="172.41345"
+         y="211.77492"
+         id="tspan15544">HOLDER</tspan></text>
   </g>
 </svg>
