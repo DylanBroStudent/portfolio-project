@@ -166,9 +166,19 @@ h2 a {
     border: var(--debug-border-width) solid var(--debug-border-color);
     padding-top: 10px;
     margin-top: 10px;
-    padding-left: 20px;
     box-shadow: 0 0 5px 5.5px var(--structure-color);
-    gap: 5px;
+}
+
+.comment-container {
+    position: relative;
+    width: 100%;
+    background-color: var(--structure-color);
+    border: var(--debug-border-width) solid var(--debug-border-color);
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 20px;
+    margin-top: 20px;
+    box-shadow: 0 0 5px 5.5px var(--structure-color);
 }
 
 .title-content {
