@@ -16,5 +16,9 @@
   "bugs": {
     "url": "https://github.com/DylanBroStudent/portfolio-project/issues"
   },
-  "homepage": "https://github.com/DylanBroStudent/portfolio-project#readme"
+  "homepage": "https://github.com/DylanBroStudent/portfolio-project#readme",
+  "dependencies": {
+    "firebase": "^12.5.0"
+  },
+  "devDependencies": {}
 }
