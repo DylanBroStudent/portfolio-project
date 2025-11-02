@@ -1,3 +1,33 @@
-<h1>test</h1>
-<br>
-<p>testing</p>
+<div class="content-section">
+    <div class="text-content">
+        <h1>Comments</h1>
+    </div>
+</div>
+<div id="comment-section" class="content-section">
+    <!-- LOGGED-OUT STATE (Visible by Default) -->
+    <div id="login-prompt-container">
+        <h2>Join the Conversation</h2>
+        <p>Please log in to leave a comment.</p>
+        <button id="loginBtn">Login with Google</button>
+    </div>
+
+    <!-- LOGGED-IN STATE (Hidden by Default) -->
+    <div id="comment-form-container" style="display: none;">
+        <h3>Leave a Comment</h3>
+        <p>Welcome, <strong id="userName"></strong>!</p>
+        <form id="comment-form">
+            <div class="form-group">
+                <textarea id="comment-text" rows="4" placeholder="Write your comment here..." required></textarea>
+            </div>
+            <button type="submit">Submit Comment</button>
+            <button type="button" id="logoutBtn" style="margin-left: 10px;">Logout</button>
+        </form>
+    </div>
+</div>
+
+<!-- DISPLAY AREA (Always Visible) -->
+<div id="comments-list" class="content-section">
+    
+    <!-- JavaScript will populate this area with comments from the database. This message will be shown initially and replaced upon loading. -->
+    <p id="comments-status-message">Loading comments...</p>
+</div>
