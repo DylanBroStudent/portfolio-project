@@ -1,8 +1,6 @@
-// use dotenv to get environment variables
-require('dotenv').config();
 
 // Import the functions you need from the SDKs you need
-import { initializeApp } from "firebase/app";
+import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -10,13 +8,15 @@ import { initializeApp } from "firebase/app";
 
 // Firebase configuration object
 const firebaseConfig = {
-  apiKey: process.env.FB_apiKey,
-  authDomain: process.env.FB_authDomain,
-  projectId: process.env.FB_projectId,
-  storageBucket: process.env.FB_storageBucket,
-  messagingSenderId: process.env.FB_messagingSenderId,
-  appId: process.env.FB_appId
+  apiKey: "AIzaSyBncvjtg6L10XbHgSc69s0TkFii3vttzro",
+  authDomain: "portfolio-website-b4972.firebaseapp.com",
+  projectId: "portfolio-website-b4972",
+  storageBucket: "portfolio-website-b4972.firebasestorage.app",
+  messagingSenderId: "925314005519",
+  appId: "1:925314005519:web:8c112fb5558935e43e417a"
 };
 
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
+
+console.log(firebaseConfig);
