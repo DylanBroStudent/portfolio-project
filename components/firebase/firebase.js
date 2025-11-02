@@ -53,6 +53,8 @@ function initialiseCommentSection() {
 
   // Listen for changes in the user's authentication state and update the UI.
   onAuthStateChanged(auth, (user) => {
+      currentUser = user;
+      listenForComments();
       if (user) {
           currentUser = user;
           loginContainer.style.display = 'none';
