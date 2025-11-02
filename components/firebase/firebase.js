@@ -1,7 +1,7 @@
 // Import the functions you need from the SDKs you need
 import { initializeApp } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-app.js";
-import { getAuth } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-auth.js";
-import { getDatabase } from "https://www.gstatic.com/firebasejs/10.7.2/firebase-database.js";
+import { getDatabase, ref, set, push, onValue, serverTimestamp } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
@@ -21,7 +21,18 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 
 // Initialise services and export instances
-export const auth = getAuth(app);
-export const db = getDatabase(app);
+const auth = getAuth(app);
+const database = getDatabase(app);
 
+// Global reference for the current user
+let currentUser = null;
 
+// Load comment section component
+async function startApp() {
+    await loadComponent("comment-app-placeholder", "components/comment-section.html");
+    initialiseCommentSection();
+}
+
+function initialiseCommentSection() {
+  
+}

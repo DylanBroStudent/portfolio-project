@@ -5,29 +5,26 @@
 </div>
 <div id="comment-section" class="content-section">
     <!-- LOGGED-OUT STATE (Visible by Default) -->
-    <div id="login-prompt-container">
-        <h2>Join the Conversation</h2>
-        <p>Please log in to leave a comment.</p>
-        <button id="loginBtn">Login with Google</button>
+    <div id="login-container" class="text-content">
+        <h3>Join the Conversation</h3>
+        <p>Please log in with your Google account to leave a comment.</p>
+        <button id="login-btn">Login with Google</button>
     </div>
 
     <!-- LOGGED-IN STATE (Hidden by Default) -->
-    <div id="comment-form-container" style="display: none;">
+    <div id="comment-section-container" class="text-content" style="display: none;">
         <h3>Leave a Comment</h3>
-        <p>Welcome, <strong id="userName"></strong>!</p>
+        <p>Welcome, <strong id="user-display-name"></strong>!</p>
         <form id="comment-form">
-            <div class="form-group">
-                <textarea id="comment-text" rows="4" placeholder="Write your comment here..." required></textarea>
-            </div>
+            <textarea id="comment-text" rows="4" placeholder="Write your comment here..." required style="width: 100%;"></textarea>
+            <br>
             <button type="submit">Submit Comment</button>
-            <button type="button" id="logoutBtn" style="margin-left: 10px;">Logout</button>
+            <button type="button" id="logout-btn" style="margin-left: 10px;">Logout</button>
         </form>
     </div>
 </div>
 
 <!-- DISPLAY AREA (Always Visible) -->
-<div id="comments-list" class="content-section">
-    
-    <!-- JavaScript will populate this area with comments from the database. This message will be shown initially and replaced upon loading. -->
-    <p id="comments-status-message">Loading comments...</p>
-</div>
+<div id="comments-container" class="container">
+        <!-- Comments will be rendered here by JavaScript -->
+    </div>
