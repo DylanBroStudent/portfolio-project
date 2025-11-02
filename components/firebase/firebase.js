@@ -197,8 +197,20 @@ function createCommentElement(commentId, data) {
         `;
     }
 
+    let formattedTimestamp = '';
+    // Check if the timestamp data exists before trying to format it
+    if (data.timestamp) {
+        // Create a new Date object from the Firebase timestamp
+        const date = new Date(data.timestamp);
+        // Use toLocaleString() to format the date and time
+        formattedTimestamp = date.toLocaleString();
+    }
+
     div.innerHTML = `
-        <p class="comment-author">${data.authorName}</p>
+        <div class="comment-header">
+            <p class="comment-author">${data.authorName}</p>
+            <p class="comment-timestamp">${formattedTimestamp}</p>
+        </div>
         <p class="comment-text">${data.text}</p>
         ${buttonsHTML}
     `;
