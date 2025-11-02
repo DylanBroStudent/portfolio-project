@@ -4,10 +4,6 @@ import { initializeApp } from "https://www.gstatic.com/firebasejs/9.15.0/firebas
 import { getDatabase, ref, set, push, onValue, serverTimestamp, update, remove } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-database.js";
 import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.15.0/firebase-auth.js";
 
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
-
-
 // Firebase configuration object
 const firebaseConfig = {
   apiKey: "AIzaSyBncvjtg6L10XbHgSc69s0TkFii3vttzro",
@@ -19,7 +15,6 @@ const firebaseConfig = {
   appId: "1:925314005519:web:8c112fb5558935e43e417a"
 };
 
-
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 
@@ -29,9 +24,19 @@ const database = getDatabase(app);
 
 // Global reference for the current user
 let currentUser = null;
+let projectId = null;
 
 // Load comment section component
 async function startApp() {
+    // get the placeholder element
+    const placeholder = document.getElementById("comment-section-placeholder");
+    if (!placeholder) return console.error("Comment placeholder not found!");
+    // get the project id
+    projectId = placeholder.dataset.projectId;
+    if (!projectId) return console.error("data-project-id attribute is missing!");
+
+    console.log(`Initializing comments for post: ${projectId}`);
+
     await loadComponent("comment-section-placeholder", "/components/comment-section/comment-section.html");
     initialiseCommentSection();
 }
@@ -111,7 +116,7 @@ function initialiseCommentSection() {
 }
 
 function listenForComments() {
-    const commentsRef = ref(database, 'comments');
+    const commentsRef = ref(database, `comments/${projectId}`);
     const container = document.getElementById('comments-container');
     
     onValue(commentsRef, (snapshot) => {
@@ -133,7 +138,7 @@ function listenForComments() {
 // Writes a new comment object to the Firebase Realtime Database.
 function handleCommentSubmit(text) {
     console.log("handleCommentSubmit function called!"); 
-    const commentsRef = ref(database, 'comments');
+    const commentsRef = ref(database, `comments/${projectId}`);
     
     const commentData = {
         uid: currentUser.uid,
@@ -156,7 +161,7 @@ function handleCommentUpdate(commentId) {
     const newText = prompt("Enter your new comment text:");
     // Proceed only if the user entered text and didn't cancel the prompt.
     if (newText && newText.trim() !== '') {
-        const commentRef = ref(database, `comments/${commentId}`);
+        const commentRef = ref(database, `comments/${projectId}/${commentId}`);
         // only modifies the specified fields, leaving others (like timestamp) intact.
         update(commentRef, {
             text: newText
@@ -167,7 +172,7 @@ function handleCommentUpdate(commentId) {
 function handleCommentDelete(commentId) {
     // confirm deletion with the user.
     if (confirm("Are you sure you want to delete this comment?")) {
-        const commentRef = ref(database, `comments/${commentId}`);
+        const commentRef = ref(database, `comments/${projectId}/${commentId}`);
         // deletes the entire object at the specified location.
         remove(commentRef)
             .catch((error) => console.error("Delete failed:", error));
