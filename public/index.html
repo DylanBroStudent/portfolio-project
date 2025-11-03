@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- js -->
+    <script type="module" src="./components/firebase/firebase.js"></script>
+    <script type="module" src="./components/footer/footer.js"></script>
+    <script type="module" src="./components/header/header.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="./assets/global-styles/global.css">
+    <link rel="stylesheet" href="./components/home/home.css">
+    <!-- misc -->
+    <script type="module" src="./components/firebase/firebase-config.js"></script>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dylan Brodie's Portfolio | Home</title>
+    <meta name="description" content="The official game development portfolio of Dylan Brodie.">
+    <meta name="keywords" content="game development, game developer, developer, portfolio, home, Dylan Brodie, C#, JavaScript, Unity, 3D, 3D Modeling, Animation, Animator">
+    <meta name="author" content="Dylan Brodie">
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="main-header" id="header-placeholder"></header>
+
+    <main>
+        <section class="content-space">
+        </section>
+        <!-- About Section -->
+        <section id="about" class="content-section">
+            <div class="foreground-content">
+                <p class="welcome-message">
+                    ><br>><br>><br>>
+                    Hi! My name's Dylan and I'm a game developer based in Nelson, New Zealand.
+                </p>
+            </div>
+            <div class="background-content">
+                <img src="./assets/images/site/nelson_3d.jpg" alt="3d model of Nelson, New Zealand's topography and shoreline.">
+            </div>
+        </section>
+
+        <section class="content-section">
+            <div class="title-content">
+                <h1><a href="./pages/projects.html">Projects</a></h1>
+            </div>
+        </section>
+        <!-- Project Showcase Section -->
+        <section id="projects" class="project-showcase">
+            <!-- Image and description -->
+            <div class="project-display">
+                <div class="project-image-large">
+                    <a href="./pages/projects/project_averse.html">
+                        <img src="./assets/projects/averse/images/Averse_image_main_golden.jpg" alt="Main display image for featured project">
+                    </a>
+                </div>
+                <div class="text-content">
+                    <h1><a href="./pages/projects/project_averse.html">Averse</a></h1>
+                    <p>
+                        Averse is a 3D exploration/horror VR game I developed in Unity.<br><br>
+                        The game features infinite randomly generated
+                        levels based on the popular online trend 'The Backrooms', as well as dynamic insects and fungi which navigate and grow
+                        in the rooms.
+                    </p>
+                </div>
+            </div>
+            <!-- Clickable thumbnail selector -->
+            <div class="project-selector">
+                <div class="selector-tile">
+                    <a href="./pages/projects/project_averse.html">
+                        <img src="./assets/projects/averse/images/Averse_image_main_golden.jpg" alt="Thumbnail for project averse">
+                    </a>
+                </div>
+                <div class="selector-tile">
+                    <a href="./pages/projects/project_rob_the_wzard.html">
+                        <img src="./assets/projects/rob-the-wizard/rob-the-wizard-golden.png" alt="Thumbnail for project b">
+                    </a>
+                </div>
+                <div class="selector-tile">
+                    <a href="./pages/projects/project_rangi.html">
+                    <img src="./assets/projects/project-rangi/rigged_golden.jpg" alt="Thumbnail for project c">
+                    </a>
+                </div>
+                <div class="selector-tile">
+                    <img src="./assets/images/site/placeholder_goldenwide.svg" alt="Thumbnail for project d">
+                </div>
+                <div class="selector-tile">
+                    <img src="./assets/images/site/placeholder_goldenwide.svg" alt="Thumbnail for project e">
+                </div>
+            </div>
+        </section>
+        
+        <!-- Contact Section -->
+        <section id="Contact" class="content-section">
+            <div class="text-content">
+                <h1><a href="./pages/contact.html">Contact</a></h1>
+                <p>
+                    <a href="mailto:dylan-brodie@live.nmit.ac.nz">dylan-brodie@live.nmit.ac.nz</a>
+                </p>
+            </div>
+            <div class="media-content">
+                <a href="./pages/contact.html"><img src="./assets/images/site/placeholder_ultrawide.svg" alt="Contact image"></a>
+            </div>
+        </section>
+    </main>
+    <!-- Footer -->
+    <footer class="footer" id="footer-placeholder"></footer>
+
+</body>
+
+</html>

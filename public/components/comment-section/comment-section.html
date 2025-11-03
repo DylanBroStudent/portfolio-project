@@ -1,0 +1,25 @@
+<div id="comment-section" class="content-section">
+    <!-- LOGGED-OUT STATE (Visible by Default) -->
+    <div id="login-container" class="text-content">
+        <h2>Join the Conversation</h2>
+        <p>Please log in with your Google account to leave a comment.</p>
+        <button id="login-btn">Login with Google</button>
+    </div>
+
+    <!-- LOGGED-IN STATE (Hidden by Default) -->
+    <div id="comment-section-container" class="text-content" style="display: none;">
+        <h2>Leave a Comment</h2>
+        <p>Welcome, <strong id="user-display-name"></strong>!</p>
+        <form id="comment-form">
+            <textarea id="comment-text" rows="4" placeholder="Write your comment here..." required style="width: 100%;"></textarea>
+            <br>
+            <button type="submit">Submit Comment</button>
+            <button type="button" id="logout-btn" style="margin-left: 10px;">Logout</button>
+        </form>
+    </div>
+</div>
+
+<!-- DISPLAY AREA (Always Visible) -->
+<div id="comments-container" class="comment-section">
+    <!-- Comments will be rendered here by JavaScript -->
+</div>

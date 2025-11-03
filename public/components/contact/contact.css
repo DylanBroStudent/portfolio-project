@@ -1,0 +1,63 @@
+form{
+    color: var(--text-main-color);
+    width: 95%;
+    padding: 10px;
+    accent-color:var(--accent-color);
+    justify-content: center;
+    font-family: var(--font-body);
+}
+
+form fieldset {
+    border: --debug-border-color solid var(--debug-border-color);
+}
+
+form fieldset textarea {
+    width: 99.5%;
+    height: 100px;
+    resize: vertical;
+}
+
+form fieldset legend {
+    font-weight: bold;
+}
+
+.contact-form-submit-button {
+    float: right;
+}
+
+.contact-social-links {
+    display: flex;
+    background-color: var(--structure-color);
+    display: flex;
+    padding: 5px;
+    margin-top: 10px;
+    gap: 5px;
+    border: --debug-border-color solid var(--debug-border-color);
+    box-shadow: 0 0 5px 5.5px var(--structure-color);
+}
+
+.contact-link-tile {
+    margin: 0 2.5px;
+}
+
+.contact-link-tile a img {
+    width: 100%;
+    height: 100%;
+    background-color: var(--image-background-color);
+}
+
+
+@media (max-width: 768px) {
+    .contact-social-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    .contact-link-tile {
+        flex: 1 30%;
+    }
+    
+    form fieldset textarea {
+        width: 100%;
+        resize: none;
+    }
+}
