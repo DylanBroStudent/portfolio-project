@@ -6,13 +6,13 @@ import { getAuth, GoogleAuthProvider, signInWithPopup, signOut, onAuthStateChang
 
 // Firebase configuration object
 const firebaseConfig = {
-  apiKey: "AIzaSyBncvjtg6L10XbHgSc69s0TkFii3vttzro",
-  authDomain: "portfolio-website-b4972.firebaseapp.com",
-  databaseURL: "https://portfolio-website-b4972-default-rtdb.asia-southeast1.firebasedatabase.app",
-  projectId: "portfolio-website-b4972",
-  storageBucket: "portfolio-website-b4972.firebasestorage.app",
-  messagingSenderId: "925314005519",
-  appId: "1:925314005519:web:8c112fb5558935e43e417a"
+    apiKey: "AIzaSyBncvjtg6L10XbHgSc69s0TkFii3vttzro",
+    authDomain: "portfolio-website-b4972.firebaseapp.com",
+    databaseURL: "https://portfolio-website-b4972-default-rtdb.asia-southeast1.firebasedatabase.app",
+    projectId: "portfolio-website-b4972",
+    storageBucket: "portfolio-website-b4972.firebasestorage.app",
+    messagingSenderId: "925314005519",
+    appId: "1:925314005519:web:8c112fb5558935e43e417a"
 };
 
 // Initialize Firebase
@@ -42,85 +42,85 @@ async function startApp() {
 }
 
 function initialiseCommentSection() {
-  // UI Element References
-  const loginContainer = document.getElementById('login-container');
-  const commentSectionContainer = document.getElementById('comment-section-container');
-  const loginBtn = document.getElementById('login-btn');
-  const logoutBtn = document.getElementById('logout-btn');
-  const commentsContainer = document.getElementById('comments-container');
-  const userDisplayName = document.getElementById('user-display-name');
-  const commentForm = document.getElementById('comment-form');
+    // UI Element References
+    const loginContainer = document.getElementById('login-container');
+    const commentSectionContainer = document.getElementById('comment-section-container');
+    const loginBtn = document.getElementById('login-btn');
+    const logoutBtn = document.getElementById('logout-btn');
+    const commentsContainer = document.getElementById('comments-container');
+    const userDisplayName = document.getElementById('user-display-name');
+    const commentForm = document.getElementById('comment-form');
 
-  // Listen for changes in the user's authentication state and update the UI.
-  onAuthStateChanged(auth, (user) => {
-      currentUser = user;
-      listenForComments();
-      if (user) {
-          currentUser = user;
-          loginContainer.style.display = 'none';
-          commentSectionContainer.style.display = 'block';
-          userDisplayName.textContent = user.displayName;
-      } else {
-          currentUser = null;
-          loginContainer.style.display = 'block';
-          commentSectionContainer.style.display = 'none';
-      }
-  });
+    // Listen for changes in the user's authentication state and update the UI.
+    onAuthStateChanged(auth, (user) => {
+        currentUser = user;
+        listenForComments();
+        if (user) {
+            currentUser = user;
+            loginContainer.style.display = 'none';
+            commentSectionContainer.style.display = 'block';
+            userDisplayName.textContent = user.displayName;
+        } else {
+            currentUser = null;
+            loginContainer.style.display = 'block';
+            commentSectionContainer.style.display = 'none';
+        }
+    });
 
-  // Initiates the Google Sign-In process when the login button is clicked.
-  loginBtn.addEventListener('click', () => {
-      const provider = new GoogleAuthProvider();
-      signInWithPopup(auth, provider)
-          .catch((error) => console.error("Login Error:", error.message));
-  });
+    // Initiates the Google Sign-In process when the login button is clicked.
+    loginBtn.addEventListener('click', () => {
+        const provider = new GoogleAuthProvider();
+        signInWithPopup(auth, provider)
+            .catch((error) => console.error("Login Error:", error.message));
+    });
 
-  // Signs the user out when the logout button is clicked.
-  logoutBtn.addEventListener('click', () => {
-      signOut(auth);
-  });
+    // Signs the user out when the logout button is clicked.
+    logoutBtn.addEventListener('click', () => {
+        signOut(auth);
+    });
 
-  commentsContainer.addEventListener('click', (e) => {
-      // Check if the clicked element has the class 'edit-btn'
-      if (e.target.matches('.edit-btn')) {
-          const commentElement = e.target.closest('.comment-container');
-          const commentId = commentElement.dataset.id;
-          handleCommentUpdate(commentId);
-      }
+    commentsContainer.addEventListener('click', (e) => {
+        // Check if the clicked element has the class 'edit-btn'
+        if (e.target.matches('.edit-btn')) {
+            const commentElement = e.target.closest('.comment-container');
+            const commentId = commentElement.dataset.id;
+            handleCommentUpdate(commentId);
+        }
 
-      // Check if the clicked element has the class 'delete-btn'
-      if (e.target.matches('.delete-btn')) {
-          const commentElement = e.target.closest('.comment-container');
-          const commentId = commentElement.dataset.id;
-          handleCommentDelete(commentId);
-      }
-  });
+        // Check if the clicked element has the class 'delete-btn'
+        if (e.target.matches('.delete-btn')) {
+            const commentElement = e.target.closest('.comment-container');
+            const commentId = commentElement.dataset.id;
+            handleCommentDelete(commentId);
+        }
+    });
 
-  // Handles the submission of the comment form.
-  commentForm.addEventListener('submit', (e) => {
-      e.preventDefault();
-      console.log("Form submitted!");
+    // Handles the submission of the comment form.
+    commentForm.addEventListener('submit', (e) => {
+        e.preventDefault();
+        console.log("Form submitted!");
 
-      const commentTextInput = document.getElementById('comment-text');
-      const commentText = commentTextInput.value;
-      console.log("Current user object:", currentUser);
-      console.log("Comment text:", commentText);
+        const commentTextInput = document.getElementById('comment-text');
+        const commentText = commentTextInput.value;
+        console.log("Current user object:", currentUser);
+        console.log("Comment text:", commentText);
 
-      if (currentUser && commentText.trim() !== '') {
-          handleCommentSubmit(commentText);
-          commentTextInput.value = ''; // Clear input after submission
-      } else {
-          console.error("Condition failed: Either no user is logged in or the comment text is empty.");
-      }
-  });
+        if (currentUser && commentText.trim() !== '') {
+            handleCommentSubmit(commentText);
+            commentTextInput.value = ''; // Clear input after submission
+        } else {
+            console.error("Condition failed: Either no user is logged in or the comment text is empty.");
+        }
+    });
 
-  // Activates the real-time listener for displaying comments.
-  listenForComments();
+    // Activates the real-time listener for displaying comments.
+    listenForComments();
 }
 
 function listenForComments() {
     const commentsRef = ref(database, `comments/${projectId}`);
     const container = document.getElementById('comments-container');
-    
+
     onValue(commentsRef, (snapshot) => {
         container.innerHTML = '<h2>Comments</h2>';
         if (snapshot.exists()) {
@@ -139,23 +139,23 @@ function listenForComments() {
 
 // Writes a new comment object to the Firebase Realtime Database.
 function handleCommentSubmit(text) {
-    console.log("handleCommentSubmit function called!"); 
+    console.log("handleCommentSubmit function called!");
     const commentsRef = ref(database, `comments/${projectId}`);
-    
+
     const commentData = {
         uid: currentUser.uid,
         authorName: currentUser.displayName,
         text: text,
         timestamp: serverTimestamp()
     };
-    console.log("Attempting to write this data:", commentData); 
+    console.log("Attempting to write this data:", commentData);
 
     set(push(commentsRef), commentData)
         .then(() => {
-            console.log("SUCCESS: Data written to Firebase."); 
+            console.log("SUCCESS: Data written to Firebase.");
         })
         .catch((error) => {
-            console.error("FIREBASE ERROR: Failed to write data.", error); 
+            console.error("FIREBASE ERROR: Failed to write data.", error);
         });
 }
 
