@@ -1,27 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- js -->
+    <script type="module" src="/components/firebase/firebase.js"></script>
+    <script type="module" src="/components/footer/footer.js"></script>
+    <script type="module" src="/components/header/header.js"></script>
+    <!-- css -->
+    <link rel="stylesheet" href="/assets/global-styles/global.css">
+    <link rel="stylesheet" href="../components/skills/skills.css">
+    <!-- misc -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dylan Brodie's Portfolio | Skills</title>
     <meta name="description" content="See Dylan Brodie's skills and experience">
     <meta name="keywords" content="Dylan Brodie, Skills, game developer skills, technical skills, art skills, software profiencecy, C#, JavaScript, Programming, Unity, Godot, Blender">
     <meta name="author" content="Dylan Brodie">
-    <link rel="stylesheet" href="../assets/global-styles/global.css">
-    <link rel="stylesheet" href="../components/skills/skills.css">
 </head>
 <body>
     <!-- Header -->
-    <header class="main-header">
-        <div class="logo"><a href="../pages/index.html">Dylan Brodie</a></div>
-        <nav class="main-nav">
-            <a href="../pages/projects.html">Projects</a>
-            <a href="../pages/about.html">About</a>
-            <a href="../pages/skills.html">Skills</a>
-            <a href="../pages/contact.html">Contact</a>
-
-        </nav>
-    </header>
+    <header class="main-header" id="header-placeholder"></header>
 
     <!-- Main Content-->
     <main>
@@ -57,6 +54,7 @@
                     <li>Python</li>
                     <li>HTML</li>
                     <li>CSS</li>
+                    <li>MySQL</li>
                     <li>GodotScript</li>
                 </ul>
             </div>
@@ -106,23 +104,7 @@
     </main>
     
     <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-content">
-            <div class="footer-section">
-                    <p class="footer-text">Interested in working with me? Get in contact at <a href="mailto:dylan-brodie@live.nmit.ac.nz" class="footer-email">dylan-brodie@live.nmit.ac.nz</a></p>
-                    <p class="footer-text">2025 Dylan Brodie. All Rights Reserved</p>
-                </div>
-            <!-- Social Media Links -->
-            <div class="footer-social-links">
-                <a href="https://github.com/DylanBroStudent">
-                    <img class="footer-social-link-icon" src="../assets/images/site/github-mark.svg" alt="Github link icon">
-                </a>
-                <a href="https://www.linkedin.com/in/dylan-brodie-99661b351/">
-                    <img class="footer-social-link-icon" src="../assets/images/site/Ln-mark.svg" alt="LinkedIn link icon">
-                </a>
+    <footer class="footer" id="footer-placeholder"></footer>
 
-            </div>
-        </div>
-    </footer>
 </body>
 </html>
