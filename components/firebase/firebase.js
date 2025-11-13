@@ -181,6 +181,7 @@ function handleCommentDelete(commentId) {
     }
 }
 
+/*
 // Creates an HTML element for a single comment.
 function createCommentElement(commentId, data) {
     const div = document.createElement('div');
@@ -218,5 +219,65 @@ function createCommentElement(commentId, data) {
     `;
     return div;
 }
+*/
+function createCommentElement(commentId, data) {
+    // Create the main container element
+    const div = document.createElement('div');
+    div.classList.add('comment-container');
+    // Store the comment's unique ID
+    div.dataset.id = commentId; 
+
+    // Create the header and its children
+    const headerDiv = document.createElement('div');
+    headerDiv.classList.add('comment-header');
+
+    const authorP = document.createElement('p');
+    authorP.classList.add('comment-author');
+    // SAFELY insert the author's name as plain text
+    authorP.textContent = data.authorName;
+
+    const timestampP = document.createElement('p');
+    timestampP.classList.add('comment-timestamp');
+    // Format and safely insert the timestamp
+    if (data.timestamp) {
+        const date = new Date(data.timestamp);
+        timestampP.textContent = date.toLocaleString();
+    }
+
+    // Create the main comment text element
+    const textP = document.createElement('p');
+    textP.classList.add('comment-text');
+    // SAFELY insert the comment's text.
+    textP.textContent = data.text;
+
+    // Assemble the structure by appending children
+    headerDiv.appendChild(authorP);
+    headerDiv.appendChild(timestampP);
+
+    div.appendChild(headerDiv);
+    div.appendChild(textP);
+
+    // Conditionally create and add buttons
+    if (currentUser && currentUser.uid === data.uid) {
+        const actionsDiv = document.createElement('div');
+        actionsDiv.classList.add('comment-actions');
+
+        const editButton = document.createElement('button');
+        editButton.classList.add('edit-btn');
+        editButton.textContent = 'Edit';
+
+        const deleteButton = document.createElement('button');
+        deleteButton.classList.add('delete-btn');
+        deleteButton.textContent = 'Delete';
+
+        actionsDiv.appendChild(editButton);
+        actionsDiv.appendChild(deleteButton);
+        div.appendChild(actionsDiv);
+    }
+
+    return div;
+}
+
+
 
 document.addEventListener("DOMContentLoaded", startApp);
